@@ -1,40 +1,42 @@
 {
-	"name": "nestri",
-	"private": true,
-	"workspaces": {
-		"packages": [
-			"apps/*",
-			"packages/*"
-		],
-		"catalog": {
-			"@cloudflare/workers-types": "^5.20260722.1",
-			"@tsconfig/node22": "^22.0.5",
-			"@types/bun": "latest",
-			"@types/node": "^26.1.1",
-			"hono": "^4.12.31",
-			"typescript": "^7.0.1-rc",
-			"zod": "^4.4.3"
-		}
-	},
-	"type": "module",
-	"scripts": {
-		"dev": "alchemy dev",
-		"test": "test",
-		"deploy:sandbox": "alchemy deploy --stage sandbox --yes",
-		"deploy:production": "alchemy deploy --stage production --yes"
-	},
-	"dependencies": {
-		"@effect/platform-bun": "4.0.0-beta.102",
-		"@effect/platform-node": "4.0.0-beta.102",
-		"@effect/sql-pg": "4.0.0-beta.102",
-		"alchemy": "^2.0.0-beta.67",
-		"effect": "^4.0.0-beta.102"
-	},
-	"devDependencies": {
-		"oxfmt": "^0.61.0",
-		"oxlint": "^1.76.0"
-	},
-	"peerDependencies": {
-		"typescript": "^7.0.1-rc"
-	}
+  "name": "nestri",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "@cloudflare/workers-types": "^5.20260722.1",
+      "@tsconfig/node22": "^22.0.5",
+      "@types/bun": "latest",
+      "@types/node": "^26.1.1",
+      "hono": "^4.12.31",
+      "typescript": "^7.0.1-rc",
+      "zod": "^4.4.3"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "node init && alchemy dev",
+    "test": "test",
+    "deploy:sandbox": "alchemy deploy --stage sandbox --yes",
+    "deploy:production": "alchemy deploy --stage production --yes"
+  },
+  "dependencies": {
+    "@effect/platform-bun": "4.0.0-beta.102",
+    "@effect/platform-node": "4.0.0-beta.102",
+    "@effect/sql-pg": "4.0.0-beta.102",
+    "alchemy": "^2.0.0-beta.67",
+    "dotenv": "^8.2.0",
+    "effect": "^4.0.0-beta.102",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.1-rc"
+  }
 }
